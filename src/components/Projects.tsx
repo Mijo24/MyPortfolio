@@ -23,6 +23,7 @@ const projects: Project[] = [
       "Created direct farmer-to-buyer marketplace"
     ],
     icon: <Smartphone className="w-8 h-8" />,
+    link: "https://agritayo-demo.onrender.com/"
   },
   {
     title: "AgriTayo E-Commerce Mobile",
@@ -35,7 +36,7 @@ const projects: Project[] = [
       "Created direct farmer-to-buyer marketplace"
     ],
     icon: <Smartphone className="w-8 h-8" />,
-    link: "https://agritayo-demo.onrender.com/"
+    link: "https://drive.google.com/file/d/1vP5R97cfUEBRtP9adEWpdzUVj2DFvBXk/view"
   }
 ];
 
@@ -109,23 +110,21 @@ export function Projects() {
               {project.link ? (
                 <div className="flex flex-col sm:flex-row gap-3">
                   <a
-                    href="https://drive.google.com/file/d/1vP5R97cfUEBRtP9adEWpdzUVj2DFvBXk/view"
+                    href={project.link}
                     target="_blank"
                     rel="noopener noreferrer"
                     className="flex items-center text-green-600 dark:text-green-400 font-medium group-hover:translate-x-2 transition-transform duration-300"
                   >
                     <Code className="w-4 h-4 mr-2" />
-                    <span>View AgriTayo Mobile</span>
+                    <span>
+                      {project.title.includes("Mobile")
+                        ? "View AgriTayo Mobile"
+                        : "View AgriTayo Website"}
+                    </span>
                     <ExternalLink className="w-4 h-4 ml-2" />
                   </a>
                 </div>
-              ) : (
-                <div className="flex items-center text-green-600 dark:text-green-400 font-medium group-hover:translate-x-2 transition-transform duration-300">
-                  <Code className="w-4 h-4 mr-2" />
-                  <span>View AgriTayo Website</span>
-                  <ExternalLink className="w-4 h-4 ml-2" />
-                </div>
-              )}
+              ) : null}
             </div>
           ))}
         </div>

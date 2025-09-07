@@ -40,12 +40,18 @@ export function Header() {
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center py-4">
-          <div
-            className="text-2xl font-bold cursor-pointer transition-colors duration-200 text-gray-900 dark:text-white hover:text-green-600 dark:hover:text-green-400"
+          <button
+            className="group text-2xl font-bold cursor-pointer transition-all duration-300 text-gray-900 dark:text-white hover:text-green-600 dark:hover:text-green-400 focus:outline-none focus:ring-2 focus:ring-green-500 focus:ring-offset-2 focus:ring-offset-white dark:focus:ring-offset-gray-900 rounded-lg px-2 py-1 relative overflow-hidden"
             onClick={() => scrollToSection('home')}
+            aria-label="Go to home section"
+            role="button"
           >
-            Michael Calalo
-          </div>
+            <span className="relative z-10 bg-gradient-to-r from-gray-900 to-gray-700 dark:from-white dark:to-gray-200 bg-clip-text text-transparent group-hover:from-green-600 group-hover:to-green-500 dark:group-hover:from-green-400 dark:group-hover:to-green-300 transition-all duration-300">
+              Michael Calalo
+            </span>
+            <div className="absolute inset-0 bg-gradient-to-r from-green-600/10 to-green-500/10 opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-lg"></div>
+            <div className="absolute bottom-0 left-0 w-0 h-0.5 bg-gradient-to-r from-green-600 to-green-500 group-hover:w-full transition-all duration-300"></div>
+          </button>
 
           {/* Desktop Navigation */}
           <nav className="hidden md:flex items-center space-x-8">

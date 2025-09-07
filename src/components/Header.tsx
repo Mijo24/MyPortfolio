@@ -58,6 +58,23 @@ export function Header() {
                 {item.name}
               </button>
             ))}
+            {/* Resume & CV Buttons */}
+            <a
+              href="https://drive.google.com/file/d/1trZdsceZ7rbp_KroVGRj9N-w_N1UThKK/view?usp=sharing"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="px-4 py-2 rounded-lg bg-green-600 text-white hover:bg-green-700 transition-colors duration-200 font-medium"
+            >
+              Resume
+            </a>
+            <a
+              href="https://drive.google.com/file/d/1pABjKCyw9_IqotxKKAPqIK18U4EuOD18/view?usp=sharing"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="px-4 py-2 rounded-lg bg-blue-600 text-white hover:bg-blue-700 transition-colors duration-200 font-medium"
+            >
+              CV
+            </a>
             <button
               onClick={toggleTheme}
               className="p-2 rounded-lg bg-gray-100 dark:bg-gray-800 hover:bg-gray-200 dark:hover:bg-gray-700 transition-all duration-200"
@@ -107,6 +124,23 @@ export function Header() {
                   {item.name}
                 </button>
               ))}
+              {/* Resume & CV Buttons */}
+              <a
+                href="/resume.pdf"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-left px-4 py-2 rounded-lg bg-green-600 text-white hover:bg-green-700 transition-colors duration-200 font-medium"
+              >
+                Resume
+              </a>
+              <a
+                href="/cv.pdf"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-left px-4 py-2 rounded-lg bg-blue-600 text-white hover:bg-blue-700 transition-colors duration-200 font-medium"
+              >
+                CV
+              </a>
             </nav>
           </div>
         )}

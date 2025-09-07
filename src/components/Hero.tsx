@@ -1,18 +1,18 @@
-import React from 'react';
-import { ChevronDown, Mail } from 'lucide-react';
+import React from "react";
+import { ChevronDown, Mail } from "lucide-react";
 
 export function Hero() {
   const scrollToContact = () => {
-    const element = document.getElementById('contact');
+    const element = document.getElementById("contact");
     if (element) {
-      element.scrollIntoView({ behavior: 'smooth' });
+      element.scrollIntoView({ behavior: "smooth" });
     }
   };
 
   const scrollToProjects = () => {
-    const element = document.getElementById('projects');
+    const element = document.getElementById("projects");
     if (element) {
-      element.scrollIntoView({ behavior: 'smooth' });
+      element.scrollIntoView({ behavior: "smooth" });
     }
   };
 
@@ -23,13 +23,26 @@ export function Hero() {
     >
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
         <div className="space-y-8 animate-fade-in">
+          {/* Profile Photo */}
+          <div className="flex justify-center">
+            <img
+              src="/michael.jpg" // ✅ now served from public/
+              alt="Michael Calalo"
+              className="w-40 h-40 rounded-full object-cover shadow-lg border-4 border-green-400 dark:border-green-600 bg-white dark:bg-gray-900"
+              style={{ margin: "0 auto" }}
+            />
+          </div>
+
           <div className="space-y-4">
             <h1 className="text-5xl sm:text-6xl lg:text-7xl font-bold text-gray-900 dark:text-white transition-colors duration-300">
-              Hi, I'm{' '}
-              <span className="text-green-600 dark:text-green-400">Michael</span>
+              Hi, I'm{" "}
+              <span className="text-green-600 dark:text-green-400">
+                Michael
+              </span>
             </h1>
             <p className="text-xl sm:text-2xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto leading-relaxed">
-              A full-stack developer passionate about building efficient, user-friendly systems
+              A full-stack developer passionate about building efficient,
+              user-friendly systems
             </p>
           </div>
 
